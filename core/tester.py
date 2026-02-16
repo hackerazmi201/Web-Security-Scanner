@@ -1,5 +1,6 @@
 import requests
-from payloads import XSS_PAYLOADS, SQLI_PAYLOADS
+from .payloads import XSS_PAYLOADS, SQLI_PAYLOADS
+
 
 def submit_form(form_details, url, payload):
     target_url = url + form_details["action"]
@@ -27,3 +28,4 @@ def test_sqli(form_details, url):
         if "sql" in response.text.lower() or "error" in response.text.lower():
             return True, payload
     return False, None
+

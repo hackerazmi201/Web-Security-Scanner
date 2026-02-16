@@ -10,7 +10,7 @@ from datetime import datetime
 init(autoreset=True)
 
 def banner():
-    print(Fore.GREEN + """
+    print(Fore.GREEN + r"""
   _    _            _                                     _ 
  | |  | |          | |                                   (_)
  | |__| | __ _  ___| | _____ _ __ __ _ _____ __ ___  _  _ 
@@ -18,6 +18,7 @@ def banner():
  | |  | | (_| | (__|   <  __/ | | (_| |/ /| | | | | | || |
  |_|  |_|\__,_|\___|_|\_\___|_|  \__,_/___|_| |_| |_|_||_|
     """)
+
 
 def save_report(results, output_file=None):
     if not os.path.exists("reports"):
@@ -79,3 +80,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
